@@ -295,34 +295,13 @@ export function Schedule() {
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
           <h2 className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl">
-            Our three day schedule is jam-packed with brilliant, creative, evil
-            geniuses.
+            关于平台工程社区
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            The worst people in our industry giving the best talks you’ve ever
-            seen. Nothing will be recorded and every attendee has to sign an NDA
-            to watch the talks.
+          平台工程作为 Gartner 发布的 2023 年十大战略技术趋势之一，目前是共建国内平台工程社区的时机。平台工程社区成立于 2023 年 7 月，目标是推动平台工程在中国的发展，同时为相关从业人员提供交流的场所。
           </p>
         </div>
       </Container>
-      <div className="relative mt-14 sm:mt-24">
-        <div className="absolute inset-x-0 -bottom-32 -top-40 overflow-hidden bg-indigo-50">
-          <Image
-            className="absolute left-full top-0 -translate-x-1/2 sm:left-1/2 sm:translate-x-[-20%] sm:translate-y-[-15%] md:translate-x-0 lg:translate-x-[5%] lg:translate-y-[4%] xl:translate-x-[27%] xl:translate-y-[-8%]"
-            src={backgroundImage}
-            alt=""
-            width={918}
-            height={1495}
-            unoptimized
-          />
-          <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
-        </div>
-        <Container className="relative">
-          <ScheduleTabbed />
-          <ScheduleStatic />
-        </Container>
-      </div>
     </section>
   )
 }

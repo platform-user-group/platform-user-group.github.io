@@ -7,24 +7,27 @@ import { Newsletter } from '@/components/Newsletter'
 import { Schedule } from '@/components/Schedule'
 import { Speakers } from '@/components/Speakers'
 import { Sponsors } from '@/components/Sponsors'
+import { Copration } from '@/components/Copration'
+import { Community } from '@/components/Community'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>DeceptiConf - A community-driven design conference</title>
+        <title>平台工程社区 (中国)</title>
         <meta
           name="description"
-          content="At DeceptiConf you’ll learn about the latest dark patterns being developed to trick even the smartest visitors, and you’ll learn how to deploy them without ever being detected."
+          content="Platform User Group"
         />
       </Head>
       <Header />
       <main>
         <Hero />
-        <Speakers />
         <Schedule />
+        <Speakers />
         <Sponsors />
-        <Newsletter />
+        <Copration/>
+        <Community/>
       </main>
       <Footer />
     </>

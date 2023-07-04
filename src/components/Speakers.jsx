@@ -26,9 +26,9 @@ import waylonHydenImage from '@/images/avatars/waylon-hyden.jpg'
 
 const days = [
   {
-    name: 'Opening Day',
-    date: 'April 4',
-    dateTime: '2022-04-04',
+    name: '成立简介',
+    date: '14:00-15:00',
+    dateTime: '2023-07-15',
     speakers: [
       {
         name: 'Steven McHail',
@@ -50,22 +50,12 @@ const days = [
         role: 'Design Engineer at Weyland-Yutani',
         image: ronniCantadoreImage,
       },
-      {
-        name: 'Erhart Cockrin',
-        role: 'Product Lead at Cyberdyne Systems',
-        image: erhartCockrinImage,
-      },
-      {
-        name: 'Parker Johnson',
-        role: 'UI Designer at MomCorp',
-        image: parkerJohnsonImage,
-      },
     ],
   },
   {
-    name: 'Speakers & Workshops',
-    date: 'April 5',
-    dateTime: '2022-04-05',
+    name: '议题分享',
+    date: '15:00-17:00',
+    dateTime: '2023-07-15',
     speakers: [
       {
         name: 'Damaris Kimura',
@@ -77,6 +67,23 @@ const days = [
         role: 'Programmer at Umbrella Corp',
         image: ibrahimFraschImage,
       },
+      {
+        name: 'Dianne Guilianelli',
+        role: 'General Manager at Initech',
+        image: dianneGuilianelliImage,
+      },
+      {
+        name: 'Ronni Cantadore',
+        role: 'Design Engineer at Weyland-Yutani',
+        image: ronniCantadoreImage,
+      },
+    ],
+  },
+  {
+    name: '圆桌讨论',
+    date: '17:00-18:00',
+    dateTime: '2023-07-15',
+    speakers: [
       {
         name: 'Cathlene Burrage',
         role: 'Frontend Developer at Buy n Large',
@@ -96,43 +103,6 @@ const days = [
         name: 'Giordano Sagucio',
         role: 'Game Developer at Soylent Corp',
         image: giordanoSagucioImage,
-      },
-    ],
-  },
-  {
-    name: 'Interviews',
-    date: 'April 6',
-    dateTime: '2022-04-06',
-    speakers: [
-      {
-        name: 'Andrew Greene',
-        role: 'Frontend Developer at Ultratech',
-        image: andrewGreeneImage,
-      },
-      {
-        name: 'Heather Terry',
-        role: 'Backend Developer at Xanatos Enterprises',
-        image: heatherTerryImage,
-      },
-      {
-        name: 'Piers Wilkins',
-        role: 'Full stack Developer at BiffCo',
-        image: piersWilkinsImage,
-      },
-      {
-        name: 'Gordon Sanderson',
-        role: 'Mobile Developer at Cobra Industries',
-        image: gordonSandersonImage,
-      },
-      {
-        name: 'Kimberly Parsons',
-        role: 'Game Developer at Tyrell Corporation',
-        image: kimberlyParsonsImage,
-      },
-      {
-        name: 'Richard Astley',
-        role: 'CEO at Roll Out',
-        image: richardAstley,
       },
     ],
   },
@@ -188,11 +158,13 @@ export function Speakers() {
             id="speakers-title"
             className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
           >
-            Speakers
+            第一次线下 Meetup
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            Learn from the experts on the cutting-edge of deception at the most
-            sinister companies.
+            暨 PUG 成立仪式
+          </p>
+          <p className="mt-4 font-display text-1xl tracking-tight text-blue-900">
+            2023.07.15 14:00-17:00 中国 北京
           </p>
         </div>
         <Tab.Group
