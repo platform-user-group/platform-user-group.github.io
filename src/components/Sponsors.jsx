@@ -2,11 +2,8 @@ import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import xintongyuanImage from '@/images/logos/xintongyuan.png'
+import Link from 'next/link'
 
-const sponsors = [
-  { name: 'xintongyuan', logo: xintongyuanImage },
-]
-// 信通院
 export function Sponsors() {
   return (
     <section id="sponsors" aria-label="Sponsors" className="py-10 sm:py-12">
@@ -16,7 +13,7 @@ export function Sponsors() {
         </h2>
         <br /><br />
         <div align="center">
-            <Image src={xintongyuanImage} width={200} height={80} unoptimized />
+          <Link href={'https://service.caict.ac.cn/'}><Image src={xintongyuanImage} width={200} height={80} unoptimized /></Link>
         </div>
       </Container>
     </section>
