@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logoImage from '@/images/pug_logo.jpg'
+import logoImage from '@/images/pug_logo.png'
 
 export function LogoBackup(props) {
   return (
