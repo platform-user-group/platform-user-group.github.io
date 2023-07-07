@@ -3,3 +3,6 @@ default:
 
 ci:
 	npm ci
+
+build:
+	npm run build && npm run export && touch ./out/.nojekyll
