@@ -9,6 +9,7 @@ import csecImage from '@/images/logos/csec.png'
 import huoshanImage from '@/images/logos/huoshan.png'
 import sealosImage from '@/images/logos/sealos.png'
 import smartideImage from '@/images/logos/smartide.png'
+import zadigImage from '@/images/logos/zadig.png'
 
 const images = [
   { name: 'bytebase', logo: bytebaseImage, url: 'https://www.bytebase.com' },
@@ -18,6 +19,7 @@ const images = [
   { name: 'huoshan', logo: huoshanImage, url: 'https://www.volcengine.com/' },
   { name: 'csec', logo: csecImage, url: 'https://service.caict.ac.cn/' },
   { name: 'smartide', logo: smartideImage, url: 'https://www.smartide.cn/' },
+  { name: 'zadig', logo: zadigImage, url: 'https://koderover.com/' },
 ]
 
 // KubeVela, KusionStack, Sealos, SmartIDE, 平台工程社区, 云原生社区
