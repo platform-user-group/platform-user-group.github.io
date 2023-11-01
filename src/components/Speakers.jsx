@@ -5,46 +5,6 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { DiamondIcon } from '@/components/DiamondIcon'
-import wangzijunImage from '@/images/avatars/wangzijun.jpg'
-import hanyinImage from '@/images/avatars/hanyin.jpg'
-import zhangqitongImage from '@/images/avatars/zhangqitong.jpg'
-import heziboImage from '@/images/avatars/hezibo.jpg'
-
-const days = [
-  {
-    name: '议题分享',
-    date: '14:00-17:00',
-    dateTime: '2023-07-15',
-    speakers: [
-      {
-        name: '王子俊',
-        role: 'Laf 云开发平台及其实现原理',
-        image: wangzijunImage,
-      },
-      {
-        name: '韩寅',
-        role: '构建一站式 Serverless 化体验的平台工程实践',
-        image: hanyinImage,
-      },
-      {
-        name: '张起彤',
-        role: '基于云原生范式构建可"无限"扩展的内部开发者平台',
-        image: zhangqitongImage,
-      },
-      {
-        name: '何子波',
-        role: '基于 KusionStack 的平台工程实践',
-        image: heziboImage,
-      },
-    ],
-  },
-  {
-    name: '圆桌讨论',
-    date: '17:00-18:00',
-    dateTime: '2023-07-15',
-    speakers: [],
-  },
-]
 
 function ImageClipPaths({ id, ...props }) {
   return (
@@ -64,7 +24,7 @@ function ImageClipPaths({ id, ...props }) {
   )
 }
 
-export function Speakers() {
+export function Speakers({ agenda }) {
   let id = useId()
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
@@ -96,13 +56,13 @@ export function Speakers() {
             id="speakers-title"
             className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
           >
-            第一次线下 Meetup
+            {agenda.title}
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            暨 PUG 成立仪式
+            {agenda.description}
           </p>
-          <p className="mt-4 font-display text-1xl tracking-tight text-blue-900">
-            2023.7.15 14:00-18:00 中国 北京 北京环球金融中心 9F 大厅
+          <p className="text-1xl mt-4 font-display tracking-tight text-blue-900">
+            {agenda.location}
           </p>
         </div>
         <Tab.Group
@@ -114,7 +74,7 @@ export function Speakers() {
             <div className="absolute bottom-0 left-0.5 top-2 hidden w-px bg-slate-200 lg:block" />
             <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-2 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
               {({ selectedIndex }) =>
-                days.map((day, dayIndex) => (
+                agenda.items.map((day, dayIndex) => (
                   <div key={day.dateTime} className="relative lg:pl-8">
                     <DiamondIcon
                       className={clsx(
@@ -151,7 +111,7 @@ export function Speakers() {
             </Tab.List>
           </div>
           <Tab.Panels className="lg:col-span-2">
-            {days.map((day) => (
+            {agenda.items.map((day) => (
               <Tab.Panel
                 key={day.dateTime}
                 className="grid grid-cols-1 gap-x-8 gap-y-0 sm:grid-cols-2 sm:gap-y-16 md:grid-cols-2 [&:not(:focus-visible)]:focus:outline-none"

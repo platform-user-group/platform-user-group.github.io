@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background.jpg'
+import agendas from '@/components/Agendas'
 
 export function Hero() {
   return (
@@ -26,23 +27,10 @@ export function Hero() {
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             <p>
-            Platform User Group (PUG) 是一个自发组织的兴趣小组，旨在推动平台工程/开源基础设施等概念在中国的普及和软件生态共建
+              Platform User Group (PUG)
+              是一个自发组织的兴趣小组，旨在推动平台工程/开源基础设施等概念在中国的普及和软件生态共建
             </p>
           </div>
-          <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
-            {[
-              ['讲师', '4'],
-              ['社区成员', '10'],
-              ['举办活动', '1'],
-            ].map(([name, value]) => (
-              <div key={name}>
-                <dt className="font-mono text-sm text-blue-600">{name}</dt>
-                <dd className="mt-0.5 text-2xl font-semibold tracking-tight text-blue-900">
-                  {value}
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </Container>
     </div>
